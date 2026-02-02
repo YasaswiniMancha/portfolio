@@ -1,22 +1,133 @@
-body {
-  font-family: Arial, sans-serif;
+/* ============================================
+   Basic reset and container
+=========================================== */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
   line-height: 1.6;
 }
 
-header {
-  background: #0f172a;
-  color: white;
-  padding: 40px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================
+   Hero / Header
+=========================================== */
+.hero {
+  padding: 50px 0 30px;           /* reduced top and bottom */
   text-align: center;
+  background: white;
 }
 
-section {
-  padding: 30px;
-  border-bottom: 1px solid #ddd;
+.hero h1 {
+  margin: 0 0 6px;                /* very tight under name */
+  font-size: 2.8rem;
 }
 
-h2 {
-  color: #0f172a;
+.title {
+  margin: 0 0 24px;               /* reduced */
+  font-size: 1.25rem;
+  color: #6b7280;
+}
+
+.contact-block {
+  margin: 0 auto 20px;            /* reduced bottom margin */
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 3.5rem;
+  margin: 0.8rem 0 1.2rem;        /* tighter */
+  font-size: 1.1rem;
+}
+
+.contact-row a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-row a:hover {
+  text-decoration: underline;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;             /* very close to contact */
+}
+
+/* ============================================
+   Main content sections
+=========================================== */
+.section {
+  padding: 30px 0;                /* reduced from 40px */
+}
+
+/* Headings — significantly less space below */
+.section h2 {
+  margin: 0 0 0.9rem;             /* ← this is the key change — very tight space under heading */
+  font-size: 2rem;
+  color: #111827;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.4rem;
+}
+
+/* Cards — tighter vertical spacing */
+.project-card,
+.experience-card {
+  margin-bottom: 1.3rem;          /* reduced */
+  padding: 1.6rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.sub-project {
+  margin: 1.4rem 0 0 0;           /* reduced top margin */
+  padding-top: 1.2rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.role-date {
+  color: #64748b;
+  margin: 0.4rem 0 0.9rem;        /* tighter */
+  font-size: 0.95rem;
+}
+
+/* Lists */
+ul {
+  margin: 0.8rem 0 0 1.2rem;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.55rem;         /* tighter list items */
+}
+
+/* Skills */
+.skills-list li {
+  margin-bottom: 0.7rem;
+}
+
+/* Paragraphs inside sections */
+.section p {
+  margin-bottom: 0.9rem;
 }
